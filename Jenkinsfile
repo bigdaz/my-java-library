@@ -6,16 +6,18 @@ pipeline {
                 sh 'gradle assemble'
             }
         }
-        parallel {
-          stage('test') {
-              steps {
-                  sh 'gradle test'
-              }
-          }
-          stage('test') {
-              steps {
-                  sh 'gradle help'
-              }
+        stage('parallel') {
+          parallel {
+            stage('test') {
+                steps {
+                    sh 'gradle test'
+                }
+            }
+            stage('help') {
+                steps {
+                    sh 'gradle help'
+                }
+            }
           }
         }
     }
