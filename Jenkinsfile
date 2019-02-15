@@ -1,6 +1,8 @@
 node {
-    checkout scm
-    // Made a change
+    stage('scm') {
+        checkout scm
+        // Made a change    
+    }
     stage('Hello') {
         echo 'Hello World'
     }
