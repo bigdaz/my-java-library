@@ -1,6 +1,6 @@
 node {
     stage('scm') {
-        echo "${scm.locations[0].remote}"
+        echo "${scm.repositories[0].remote}"
         //checkout scm
         // Made a change    
     }
