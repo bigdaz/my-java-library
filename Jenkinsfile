@@ -1,6 +1,6 @@
 node {
     stage('scm') {
-        echo "${scm.repositories[0].uris}"
+        echo "${scm.repositories[0].getURIs()}"
         //checkout scm
         // Made a change    
     }
