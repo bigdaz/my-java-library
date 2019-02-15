@@ -1,7 +1,7 @@
 node {
     stage('scm') {
-        echo scm
-        checkout scm
+        echo "${scm.locations[0].remote}"
+        //checkout scm
         // Made a change    
     }
     stage('Hello') {
