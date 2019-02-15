@@ -3,6 +3,6 @@ node {
         echo 'Hello World'
     }
     stage('Goodbye') {
-        echo 'Goodbye world'
+        echo 'Goodbye cruel world'
     }
 }
