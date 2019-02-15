@@ -1,5 +1,6 @@
 node {
     stage('scm') {
+        echo scm
         checkout scm
         // Made a change    
     }
