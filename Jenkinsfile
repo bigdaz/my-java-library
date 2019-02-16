@@ -12,6 +12,7 @@ node {
     stage('scm') {
         if (hasSCM()) {
             echo "SCM is NOT NULL"
+            checkout scm
             echo "${scm.repositories[0].getURIs()}"
         } else {
             echo "SCM is NULL"
