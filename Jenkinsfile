@@ -1,5 +1,3 @@
-//Make a change
-// Make another change
 def hasSCM() {
     try {
         scm
