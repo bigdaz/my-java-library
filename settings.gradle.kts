@@ -8,3 +8,5 @@
  */
 
 rootProject.name = "my-java-lib"
+
+apply(from = "gradle/buildCache.gradle")
