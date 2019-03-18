@@ -1,0 +1,10 @@
+node('linux') {
+    checkout scm
+    try {
+        withCredentials([string(credentialsId: 'remote-build-cache', variable: 'BUILD_CACHE_PASSWORD')]) {
+            sh './gradlew --continue clean assemble check'
+        }
+    } finally {
+        junit allowEmptyResults: true, testResults: '**/TEST-*.xml'
+    }
+}
